@@ -54,7 +54,7 @@ def parse_arguments():
         description="Run high-throughput multi-pass blocking & candidate generation pipeline."
     )
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-    default_test_dir = os.path.join(base_dir, "dataset", "test")
+    default_test_dir = os.path.join(base_dir, "student_resource", "dataset", "test")
     default_output_dir = os.path.join(base_dir, "output")
 
     parser.add_argument(
