@@ -17,7 +17,7 @@ from preprocessing import normalize_country, normalize_business_name, extract_to
 def parse_args():
     parser = argparse.ArgumentParser()
     # Paths configured to work both locally and in SageMaker containers
-    parser.add_argument('--train-dir', type=str, default=os.environ.get('SM_CHANNEL_TRAIN', '../../../student_resource/dataset/train'))
+    parser.add_argument('--train-dir', type=str, default=os.environ.get('SM_CHANNEL_TRAIN', '../../dataset/train'))
     parser.add_argument('--model-dir', type=str, default=os.environ.get('SM_MODEL_DIR', '.'))
     parser.add_argument('--limit', type=int, default=None, help='Limit S1 entities for local fast testing')
     parser.add_argument('--neg-ratio', type=int, default=4, help='Hard negatives per positive')
