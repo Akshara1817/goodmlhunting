@@ -53,15 +53,21 @@ def parse_arguments():
     parser = argparse.ArgumentParser(
         description="Run high-throughput multi-pass blocking & candidate generation pipeline."
     )
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-    default_test_dir = os.path.join(base_dir, "student_resource", "dataset", "test")
-    default_output_dir = os.path.join(base_dir, "output")
+    
+    # 2 levels up to goodmlhunting for the dataset
+    dataset_base = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    # 3 levels up to ml_challenge for output
+    output_base = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+    
+    default_test_dir = os.path.join(dataset_base, "dataset", "test")
+    default_output_dir = os.path.join(output_base, "output")
 
     parser.add_argument(
         "--s1",
         default=os.path.join(default_test_dir, "test_source1.tsv"),
         help="Path to Source 1 TSV file."
     )
+    # ... (Keep the rest of the add_argument blocks identical)    
     parser.add_argument(
         "--s2",
         default=os.path.join(default_test_dir, "test_source2.tsv"),

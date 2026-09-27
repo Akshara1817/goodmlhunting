@@ -22,16 +22,15 @@ def fast_preprocess(df):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--s1', default='../../student_resource/dataset/test/test_source1.tsv')
-    parser.add_argument('--s2', default='../../student_resource/dataset/test/test_source2.tsv')
-    parser.add_argument('--s3', default='../../student_resource/dataset/test/test_source3.tsv')
-    parser.add_argument('--candidates', default='../../output/candidate_pairs.tsv')
-    parser.add_argument('--output', default='../../output/matching_results.tsv')
+    parser.add_argument('--s1', default='../../dataset/test/test_source1.tsv')
+    parser.add_argument('--s2', default='../../dataset/test/test_source2.tsv')
+    parser.add_argument('--s3', default='../../dataset/test/test_source3.tsv')
+    parser.add_argument('--candidates', default='../../../output/candidate_pairs.tsv')
+    parser.add_argument('--output', default='../../../output/matching_results.tsv')
     parser.add_argument('--model', default='lgbm_model.txt')
     parser.add_argument('--threshold-file', default='optimal_threshold.txt')
     parser.add_argument('--limit', type=int, default=None)
     return parser.parse_args()
-
 
 def main():
     args = parse_args()

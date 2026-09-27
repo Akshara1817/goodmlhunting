@@ -34,7 +34,7 @@ def process_file(input_path: str, output_path: str):
 
 
 def main():
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     train_dir = os.path.join(base_dir, "dataset", "train")
     output_dir = os.path.join(base_dir, "dataset", "preprocessed")
     
